@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 20 14% 97%;
+    --foreground: 20 14% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 14% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14% 11%;
+
+    --primary: 31 100% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 31 20% 94%;
+    --secondary-foreground: 31 60% 25%;
+
+    --muted: 31 10% 95%;
+    --muted-foreground: 31 8% 45%;
+
+    --accent: 270 85% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 31 15% 88%;
+    --input: 31 15% 88%;
+    --ring: 31 100% 65%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 210 20% 98%;
+    --sidebar-foreground: 220 14% 15%;
+    --sidebar-primary: 220 14% 15%;
+    --sidebar-primary-foreground: 210 20% 98%;
+    --sidebar-accent: 210 20% 95%;
+    --sidebar-accent-foreground: 220 14% 15%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 220 14% 15%;
+  }
+
+  .dark {
+    --background: 20 14% 4%;
+    --foreground: 31 20% 95%;
+
+    --card: 20 14% 6%;
+    --card-foreground: 31 20% 95%;
+
+    --popover: 20 14% 6%;
+    --popover-foreground: 31 20% 95%;
+
+    --primary: 31 100% 65%;
+    --primary-foreground: 20 14% 4%;
+
+    --secondary: 20 14% 12%;
+    --secondary-foreground: 31 20% 95%;
+
+    --muted: 20 14% 12%;
+    --muted-foreground: 31 8% 65%;
+
+    --accent: 270 85% 60%;
+    --accent-foreground: 20 14% 4%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 31 20% 95%;
+
+    --border: 20 14% 15%;
+    --input: 20 14% 15%;
+    --ring: 31 100% 65%;
+    
+    --sidebar-background: 220 14% 8%;
+    --sidebar-foreground: 210 20% 95%;
+    --sidebar-primary: 210 20% 95%;
+    --sidebar-primary-foreground: 220 14% 8%;
+    --sidebar-accent: 220 14% 15%;
+    --sidebar-accent-foreground: 210 20% 95%;
+    --sidebar-border: 220 14% 15%;
+    --sidebar-ring: 210 20% 85%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-background via-background to-secondary text-foreground;
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+  }
+  
+  .glass-effect {
+    @apply backdrop-blur-sm bg-white/10 border border-white/20;
+  }
+  
+  .shadow-glow {
+    box-shadow: 0 8px 32px hsl(var(--primary) / 0.15);
+  }
+}
