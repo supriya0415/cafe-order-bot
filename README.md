@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# Cafe Order Bot project
 # DEMO:
 https://youtu.be/MU44xsAGUww
 ## Project info
